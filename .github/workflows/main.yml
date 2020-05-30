@@ -55,4 +55,4 @@ jobs:
       #     REPO: git@github.com:mylong123/bing-pic.git
       #     BRANCH: master
       #     FOLDER: tmp
-      #     SSH_PRIVATE_KEY: ${{ secrets.SSHTOKEN }}
+      #     SSH_PRIVATE_KEY: ${{ secrets.SSHTOKEN }} 
