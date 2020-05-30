@@ -35,15 +35,15 @@ jobs:
           github_token: ${{ secrets.TOKEN }}
           # repository: mylong123/bingpic
           branch: master      
-      - name: 'Create a Release'
-        uses: elgohr/Github-Release-Action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          # BRANCH: gh-pages
-        with:
-          release: BingImage
+      # - name: 'Create a Release'
+      #   uses: elgohr/Github-Release-Action@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      #     # BRANCH: gh-pages
+      #   with:
+      #     release: BingImage
       #提交到page
-      - name: Push changes
+      - name: Push page
         uses: s0/git-publish-subdir-action@master
         env:
           REPO: git@github.com:mylong123/bingpic.git
