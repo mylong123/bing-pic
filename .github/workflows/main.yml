@@ -45,8 +45,8 @@ jobs:
       - name: Deploy
         uses: s0/git-publish-subdir-action@master
         env:
-          REPO: bingpic
-          BRANCH: gh-pages
+          REPO: self
+          BRANCH: master
           FOLDER: public/site
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
       # - name: 'Create a Release'
