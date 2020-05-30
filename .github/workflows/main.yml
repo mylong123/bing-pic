@@ -36,6 +36,7 @@ jobs:
       - name: 'Create a Release'
         uses: elgohr/Github-Release-Action@master
         env:
+          REPO: bingpic
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           # BRANCH: gh-pages
         with:
