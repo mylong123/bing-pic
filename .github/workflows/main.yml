@@ -45,10 +45,10 @@ jobs:
       - name: Deploy
         uses: s0/git-publish-subdir-action@master
         env:
-          REPO: self
+          REPO: git@github.com:mylong123/bingpic.git
           BRANCH: master
-          FOLDER: public/site
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          FOLDER: /
+          SSH_PRIVATE_KEY: ${{ secrets.SSHTOKEN }}
       # - name: 'Create a Release'
       #   uses: elgohr/Github-Release-Action@master
       #   env:
