@@ -13,8 +13,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-        persist-credentials: false # 否则,是GITHUB_TOKEN使用的令牌,而不是你个人的令牌
-        fetch-depth: 0 # 否则,你将参未能推动回购不在座位上
+          persist-credentials: false # 否则,是GITHUB_TOKEN使用的令牌,而不是你个人的令牌
+          fetch-depth: 0 # 否则,你将参未能推动回购不在座位上
       - name: 'Set up Python'
         uses: actions/setup-python@v1
         with:
