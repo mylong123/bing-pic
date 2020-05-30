@@ -38,7 +38,7 @@ jobs:
       - name: 'Push changes'
         uses: s0/git-publish-subdir-action@master
         env:
-          REPO: https://github.com/mylong123/bingpic.git
+          REPO: github.com/mylong123/bingpic.git
           BRANCH: master
           FOLDER: ./dit        
           SSH_PRIVATE_KEY: ${{ secrets.TOKEN }}
