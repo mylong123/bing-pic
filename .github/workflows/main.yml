@@ -46,7 +46,7 @@ jobs:
       - name: Push page
         uses: s0/git-publish-subdir-action@master
         env:
-          REPO: git@github.com:mylong123/bingpic.git
+          REPO: git@github.com:mylong123/bing-pic.git
           BRANCH: master
           FOLDER: tmp
           SSH_PRIVATE_KEY: ${{ secrets.SSHTOKEN }}
