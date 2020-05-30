@@ -33,7 +33,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.TOKEN }}
-          repository: https://github.com/mylong123/bingpic/master
+          repository: mylong123/bingpic
           branch: master
       # - name: 'Push changes'
       #   uses: s0/git-publish-subdir-action@master
