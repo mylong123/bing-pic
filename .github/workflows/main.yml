@@ -48,5 +48,5 @@ jobs:
         env:
           REPO: git@github.com:mylong123/bingpic.git
           BRANCH: master
-          FOLDER: json
+          FOLDER: tmp
           SSH_PRIVATE_KEY: ${{ secrets.SSHTOKEN }}
