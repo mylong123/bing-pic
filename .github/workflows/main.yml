@@ -28,7 +28,7 @@ jobs:
           git config --local user.email "1302070253@qq.com"
           git config --local user.name "mylong123"
           git add -A
-          git commit -m "add a BingPic" -a
+          git commit -m "?? add a BingPic" -a
       - name: 'Push changes'
         uses: ad-m/github-push-action@master
         with:
@@ -37,6 +37,6 @@ jobs:
         uses: elgohr/Github-Release-Action@master
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-          BRANCH: gh-pages
+          # BRANCH: gh-pages
         with:
           args: BingImage
