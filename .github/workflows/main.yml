@@ -32,11 +32,11 @@ jobs:
       - name: 'Push changes'
         uses: ad-m/github-push-action@master
         with:
+          REPO: https://github.com/mylong123/bingpic.git
           github_token: ${{ secrets.TOKEN }}
       - name: 'Create a Release'
         uses: elgohr/Github-Release-Action@master
         env:
-          REPO: https://github.com/mylong123/bingpic.git
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           # BRANCH: gh-pages
         with:
