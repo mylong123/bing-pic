@@ -38,9 +38,8 @@ jobs:
       - name: 'Push changes'
         uses: s0/git-publish-subdir-action@master
         env:
-          REPO: github.com/mylong123/bingpic.git
-          BRANCH: master
-          FOLDER: ./dit        
+          REPO: mylong123/bingpic
+          BRANCH: master        
           SSH_PRIVATE_KEY: ${{ secrets.TOKEN }}
       # - name: 'Create a Release'
       #   uses: elgohr/Github-Release-Action@master
