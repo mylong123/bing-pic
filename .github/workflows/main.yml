@@ -47,7 +47,7 @@ jobs:
         env:
           REPO: git@github.com:mylong123/bingpic.git
           BRANCH: master
-          FOLDER: /
+          FOLDER: dit
           SSH_PRIVATE_KEY: ${{ secrets.SSHTOKEN }}
       # - name: 'Create a Release'
       #   uses: elgohr/Github-Release-Action@master
