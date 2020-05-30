@@ -39,13 +39,13 @@ jobs:
           repository: mylong123/bing-pic
           branch: master
           directory: .
-      # - name: 'Create a Release'
-      #   uses: elgohr/Github-Release-Action@master
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      #     # BRANCH: gh-pages
-      #   with:
-      #     release: BingImage
+      - name: 'Create a Release'
+        uses: elgohr/Github-Release-Action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          # BRANCH: gh-pages
+        with:
+          release: BingImage
       #提交到page
       # - name: Push page
       #   uses: s0/git-publish-subdir-action@master
