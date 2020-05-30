@@ -38,7 +38,7 @@ jobs:
       - name: 'Push changes'
         uses: s0/git-publish-subdir-action@master
         env:
-          REPO: git@github.com:mylong123/bingpic.git
+          REPO: bingpic
           BRANCH: master
           FOLDER: ./dit
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
