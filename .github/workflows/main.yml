@@ -29,30 +29,24 @@ jobs:
           git config --local user.name "mylong123"
           git add -A
           git commit -m "?? add a BingPic" -a
-      # - name: 'Push changes'
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.TOKEN }}
-      #     repository: mylong123/bingpic
-      #     branch: master
-      # - name: 'Push changes'
-      #   uses: s0/git-publish-subdir-action@master
-      #   env:
-      #     REPO: bingpic
-      #     BRANCH: master
-      #     FOLDER: ./dit
-      #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      - name: Deploy
+      - name: 'Push changes'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.TOKEN }}
+          # repository: mylong123/bingpic
+          branch: master      
+      - name: 'Create a Release'
+        uses: elgohr/Github-Release-Action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          # BRANCH: gh-pages
+        with:
+          release: BingImage
+      #提交到page
+      - name: Push changes
         uses: s0/git-publish-subdir-action@master
         env:
           REPO: git@github.com:mylong123/bingpic.git
           BRANCH: master
           FOLDER: json
           SSH_PRIVATE_KEY: ${{ secrets.SSHTOKEN }}
-      # - name: 'Create a Release'
-      #   uses: elgohr/Github-Release-Action@master
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      #     # BRANCH: gh-pages
-      #   with:
-      #     release: BingImage
