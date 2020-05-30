@@ -16,8 +16,8 @@ def GetPic():
     else:
         print('Create Image Faild!')
 
-    open(r'./README.md'.format(start_date), 'wb').write("4")
-    print('Create Json Success!')
+    open(r'./README.md', 'wb').write('11')
+    print('Create md Success!')
 
 if __name__ == "__main__":
     GetPic()
