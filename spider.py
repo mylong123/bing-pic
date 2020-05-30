@@ -15,10 +15,10 @@ def GetPic():
         print('Create Image Success!')
     else:
         print('Create Image Faild!')
-    str = '111'
-    open('./README.md', 'wb').write(str.encode())
-    open('./tmp/README.md', 'wb').write(str.encode())
-    print('Create md Success!')
+    # str = '111'
+    # open('./README.md', 'wb').write(str.encode())
+    # open('./tmp/README.md', 'wb').write(str.encode())
+    # print('Create md Success!')
 
 if __name__ == "__main__":
     GetPic()
