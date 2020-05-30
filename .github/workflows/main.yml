@@ -47,7 +47,7 @@ jobs:
         env:
           REPO: bingpic
           BRANCH: gh-pages
-          FOLDER: dit
+          FOLDER: public/site
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
       # - name: 'Create a Release'
       #   uses: elgohr/Github-Release-Action@master
