@@ -34,7 +34,7 @@ jobs:
         with:
           github_token: ${{ secrets.TOKEN }}
           # repository: mylong123/bingpic
-          branch: mylong123/bingpic/master
+          branch: https://github.com/mylong123/bingpic/master
       # - name: 'Push changes'
       #   uses: s0/git-publish-subdir-action@master
       #   env:
