@@ -39,7 +39,7 @@ jobs:
           repository: mylong123/bing-pic
           branch: master
           force: true
-          directory: .
+          # directory: .
       - name: 'Create a Release'
         uses: elgohr/Github-Release-Action@master
         env:
