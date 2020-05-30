@@ -39,7 +39,8 @@ jobs:
         uses: s0/git-publish-subdir-action@master
         env:
           REPO: mylong123/bingpic
-          BRANCH: master        
+          BRANCH: master
+          FOLDER: ./        
           SSH_PRIVATE_KEY: ${{ secrets.TOKEN }}
       # - name: 'Create a Release'
       #   uses: elgohr/Github-Release-Action@master
