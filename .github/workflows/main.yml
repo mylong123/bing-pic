@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+        persist-credentials: false # 否则,是GITHUB_TOKEN使用的令牌,而不是你个人的令牌
+        fetch-depth: 0 # 否则,你将参未能推动回购不在座位上
       - name: 'Set up Python'
         uses: actions/setup-python@v1
         with:
@@ -33,8 +36,9 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.TOKEN }}
-          # repository: mylong123/bingpic
-          branch: master      
+          repository: mylong123/bingpic
+          branch: master
+          directory: .
       # - name: 'Create a Release'
       #   uses: elgohr/Github-Release-Action@master
       #   env:
@@ -43,10 +47,10 @@ jobs:
       #   with:
       #     release: BingImage
       #提交到page
-      - name: Push page
-        uses: s0/git-publish-subdir-action@master
-        env:
-          REPO: git@github.com:mylong123/bing-pic.git
-          BRANCH: master
-          FOLDER: tmp
-          SSH_PRIVATE_KEY: ${{ secrets.SSHTOKEN }}
+      # - name: Push page
+      #   uses: s0/git-publish-subdir-action@master
+      #   env:
+      #     REPO: git@github.com:mylong123/bing-pic.git
+      #     BRANCH: master
+      #     FOLDER: tmp
+      #     SSH_PRIVATE_KEY: ${{ secrets.SSHTOKEN }}
