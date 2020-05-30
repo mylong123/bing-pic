@@ -40,7 +40,7 @@ jobs:
         env:
           REPO: mylong123/bingpic
           BRANCH: master
-          FOLDER: ./        
+          FOLDER: /
           SSH_PRIVATE_KEY: ${{ secrets.TOKEN }}
       # - name: 'Create a Release'
       #   uses: elgohr/Github-Release-Action@master
