@@ -30,7 +30,8 @@ jobs:
         run: |
           git config --local user.email "1302070253@qq.com"
           git config --local user.name "mylong123"
-          git add -A
+          # git add -A
+          git add .
           git commit -m "?? add a BingPic" -a
       - name: 'Push changes'
         uses: ad-m/github-push-action@master
@@ -38,7 +39,7 @@ jobs:
           github_token: ${{ secrets.TOKEN }}
           repository: mylong123/bing-pic
           branch: master
-          # force: true
+          force: true
           directory: .
       - name: 'Create a Release'
         uses: elgohr/Github-Release-Action@master
