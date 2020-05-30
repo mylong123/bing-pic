@@ -32,8 +32,9 @@ jobs:
       - name: 'Push changes'
         uses: ad-m/github-push-action@master
         with:
-          repository: mylong123/bingpic
           github_token: ${{ secrets.TOKEN }}
+          repository: https://TOKEN@github.com/mylong123/bingpic.git
+          branch: master
       - name: 'Create a Release'
         uses: elgohr/Github-Release-Action@master
         env:
