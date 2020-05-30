@@ -32,7 +32,7 @@ jobs:
       - name: 'Push changes'
         uses: ad-m/github-push-action@master
         with:
-          repository: https://github.com/mylong123/bingpic.git
+          repository: bingpic
           github_token: ${{ secrets.TOKEN }}
       - name: 'Create a Release'
         uses: elgohr/Github-Release-Action@master
