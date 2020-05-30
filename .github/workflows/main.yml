@@ -29,6 +29,8 @@ jobs:
           git config --local user.name "mylong123"
           git add -A
           git commit -m "?? add a BingPic" -a
+          git config --global http.proxy http://127.0.0.1:1080
+          git config --global https.proxy http://127.0.0.1:1080
       - name: 'Push changes'
         uses: ad-m/github-push-action@master
         with:
@@ -42,10 +44,10 @@ jobs:
       #     BRANCH: master
       #     FOLDER: ./dit
       #     SSH_PRIVATE_KEY: ${{ secrets.TOKEN }}
-      # - name: 'Create a Release'
-      #   uses: elgohr/Github-Release-Action@master
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      #     # BRANCH: gh-pages
-      #   with:
-      #     release: BingImage
+      - name: 'Create a Release'
+        uses: elgohr/Github-Release-Action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          # BRANCH: gh-pages
+        with:
+          release: BingImage
